@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+    <div class="search-container">
+        <input type="text" id="city" placeholder="Search your city">
+        <button id="getWeather">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/search.png" alt="Search">
+        </button>
+    </div>
+
+    <div class="card">
+        <div id="cityName" class="top-element"></div>
+
+        <div id="weatherInfo" style="display: none;">
+            <div class="weather-details">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+                <span id="temperature"></span>
+                <div id="toggleUnitContainer">
+                    <button id="toggleUnitC" class="unit active">°C</button>
+                    <button id="toggleUnitF" class="unit">°F</button>
+                </div>
+            </div>
+            <p id="weatherDescription"></p>
+            <p id="lastUpdated"></p><br>
+            <div class="weather-info-line">
+                <p id="feelsLike">Feels like: <span></span></p>
+                <p id="wind">Wind: <span></span></p>
+                <p id="visibility">Visibility: <span></span></p>
+            </div>
+            <div class="weather-info-line">
+                <p id="humidity">Humidity: <span></span></p>
+                <p id="uvIndex">UV Index: <span></span></p>
+                <p id="dewPoint">Dew Point: <span></span></p>
+            </div>
+            <div class="weather-info-line">
+                <p id="sunrise">Sunrise: <span></span></p>
+                <p id="sunset">Sunset: <span></span></p>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <div class="footer">
+        <p>Data provided by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a></p>
+        <p>Developed by <a href="https://github.com/prabhu-ji" target="_blank">prabhu-ji</a></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+
+</html>
